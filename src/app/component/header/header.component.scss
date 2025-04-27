@@ -1,3 +1,29 @@
 .logo{
     width: 120px;
 }
+
+::ng-deep .p-accordionheader {
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+::ng-deep .p-accordioncontent {
+    box-shadow: none !important;
+    // padding: 15px;
+}
+
+::ng-deep .p-accordioncontent-content {
+    box-shadow: none !important;
+    border: none;
+}
+
+::ng-deep .p-accordion{
+    display: grid !important;
+    gap: 20px !important;
+
+    .p-iconwrapper{
+        display: none;
+    }
+}
