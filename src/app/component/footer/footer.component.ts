@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../button/button.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [ButtonComponent, AnimateOnScrollModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

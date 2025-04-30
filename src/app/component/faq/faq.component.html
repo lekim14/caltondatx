@@ -1,1 +1,26 @@
-<p>faq works!</p>
+<div class="pl-3 pr-3 pt-3 pb-10 md:p-12 md:pt-8 bg-[#021b42] text-white">
+    <p pAnimateOnScroll enterClass="animate-slideInLeft" class="md:text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-15">Frequently Asked Questions</p>
+    <!-- <div *ngIf="loading()">
+        <ngx-skeleton-loader animation="pulse" count="3" [theme]="{height: '50px', background: '#eff1f6'}" />
+    </div> -->
+    <p-accordion [value]="'2'" class="[--p-accordion-panel-border-width:1px]">
+        <div *ngFor="let faq of faqs ">
+            <div class="bg-transparent">
+                <p-accordion-panel [value]="faq.id">
+                    <p-accordion-header>
+                        <div pAnimateOnScroll enterClass="animate-slideInLeft" class="p-[8px] md:p-[15px]">
+                            <p class="md:text-2xl font-bold pl-4">{{ faq.question }}</p>
+                        </div>
+                    </p-accordion-header>
+                    <p-accordion-content>
+                        <div class="p-[15px]">
+                            <p class="m-0 italic font-light lg:text-2xl md:text-xl">
+                                {{ faq.answer }}
+                            </p>
+                        </div>
+                    </p-accordion-content>
+                </p-accordion-panel>
+            </div>
+        </div>
+    </p-accordion>
+</div>

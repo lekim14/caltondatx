@@ -1,1 +1,34 @@
-<p>contact-us works!</p>
+<div class="pl-3 pr-3 pt-10 pb-10 md:p-12 md:pt-25 bg-white">
+    <div class="flex justify-center flex-wrap md:flex-nowrap gap-5 md:gap-20 md:pl-10 md:pr-10">
+        <div class="grid place-items-center md:w-[50%] text-[#002868]">
+            <div>
+                <p class="font-thin md:text-xl">CONTACT US</p>
+                <p pAnimateOnScroll enterClass="animate-slideInLeft" class="font-bold text-3xl md:text-5xl md:mb-4 tracking-tight">Headline</p>
+                <p class="font-thin italic md:text-xl">
+                    We're Here to Help — Get in Touch with
+                    Caltondatx
+                </p>
+            </div>
+        </div>
+
+        <form (submit)="submit($event)" class="grid md:gap-3 gap-3 w-full md:w-[50%] place-items-center">
+            <input required id="fullName" (input)="onInput('fullName', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="text" placeholder="Full Name">
+            <input required id="email" (input)="onInput('email', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="email" placeholder="Email Address">
+            <input id="contactNumber" (input)="onInput('contactNumber', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="number" placeholder="Contact Number">
+            <textarea required id="message" (input)="onInput('message', $event)" class="placeholder:text-gray-400 w-full h-20 p-2 md:w-full md:h-30 md:p-3 border-2 border-solid border-[#002868] resize-none font-light" name="" placeholder="Message"></textarea>
+            <button type="submit" class="w-full bg-[#002868] text-white h-[30px] md:h-[50px] font-light hover:bg-white hover:text-[#002868] hover:border-1 hover:border-solid hover:border-[#002868] cursor-pointer">Submit</button>
+        </form>
+    </div>
+
+    <div class="grid pt-15 md:pt-25">
+        <hr class="border-t-2 md:border-t-4 border-[#002868] my-2"/>
+        <div class="flex justify-between italic text-[#002868]">
+            <p class="text-xs md:text-lg w-[50%] md:w-auto">&#64;2024 Nyxsys Philippines, Inc. All rights reserved</p>
+            <div class="md:flex md:flex-wrap md:flex-nowrap grid grid-rows-3 grid-flow-col gap-2 justify-end md:gap-5 lg:gap-25 md:w-[50%] text-xs md:text-lg">
+                <span>License</span>
+                <span>Terms of Service</span>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+    </div>
+</div>
