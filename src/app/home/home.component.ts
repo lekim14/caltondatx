@@ -12,13 +12,23 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 
 @Component({
   selector: 'app-home',
-  imports: [ButtonComponent, FaqComponent, CarouselModule, ContactUsComponent, AccordionModule, AnimateOnScrollModule, FooterComponent, ScrollTopModule],
+  imports: [
+    ButtonComponent, 
+    FaqComponent, 
+    CarouselModule, 
+    ContactUsComponent, 
+    AccordionModule, 
+    AnimateOnScrollModule, 
+    FooterComponent, 
+    ScrollTopModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit{
   headerTitle = signal('');
   customerStories!: CustomerStories[]; 
+  activatedRoute: any;
 
   constructor(private reviewApi: ReviewsService){}
 

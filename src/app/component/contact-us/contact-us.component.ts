@@ -52,16 +52,6 @@ export class ContactUsComponent {
       contactNumber : this.contactNumber(),
       message : this.message(),
     }
-
-    // if(!this.validateEmail(this.email())){
-    //   alert('Invalid email address.')
-    //   return
-    // }
-
-    // if(!this.contactNumber()){
-    //   alert('Contact number is required.')
-    //   return
-    // }
     
     this.contactApi.makePost(payload).subscribe({
       next: (response) => console.log('Success:', response),
