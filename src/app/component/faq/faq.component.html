@@ -3,7 +3,7 @@
     <!-- <div *ngIf="loading()">
         <ngx-skeleton-loader animation="pulse" count="3" [theme]="{height: '50px', background: '#eff1f6'}" />
     </div> -->
-    <p-accordion [value]="'2'" class="[--p-accordion-panel-border-width:1px]">
+    <p-accordion [value]="'2'" class="[--p-accordion-panel-border-width:1px] [--p-accordion-header-background: transparent]">
         <div *ngFor="let faq of faqs ">
             <div class="bg-transparent">
                 <p-accordion-panel [value]="faq.id">
@@ -12,7 +12,7 @@
                             <p class="md:text-2xl font-bold pl-4">{{ faq.question }}</p>
                         </div>
                     </p-accordion-header>
-                    <p-accordion-content>
+                    <p-accordion-content class="[--p-accordion-content-color: white]">
                         <div class="p-[15px]">
                             <p class="m-0 italic font-light lg:text-2xl md:text-xl">
                                 {{ faq.answer }}

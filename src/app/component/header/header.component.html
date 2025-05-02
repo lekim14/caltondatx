@@ -1,5 +1,23 @@
-<header>
-    <nav>
-        <!--  -->
-    </nav>
-</header>
+<p-menubar [model]="items">
+    <ng-template #start>
+        <div>
+            <img class="hidden md:block w-[160px] md:w-[180px]" src="/assets/images/logo.png" alt="Caltondatx Logo">
+        </div>
+    </ng-template>
+    <ng-template styleClass="p-20" class="p-20" #item let-item let-root="root">
+        <a [routerLink]="item.route" pRipple="true" class="flex items-center p-menubar-item-link">
+            <span>{{ item.label }}</span>
+            <span *ngIf="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-xs p-1">
+                {{ item.shortcut }}
+            </span>
+            <i *ngIf="item.items" class="md:[--p-icon-size:0.6rem]" [ngClass]="['ml-auto pi', root ? 'pi-caret-down' : 'pi-angle-right']"></i>
+        </a>
+    </ng-template>
+    <ng-template #end>
+        <div class="flex items-center gap-2 text-white">
+            <app-button ngClass="hidden md:block" buttonClass="md:text-sm text-[#002868] bg-white cursor-pointer text-xs lg:text-lg hover:bg-[#002868] hover:text-white hover:border-1 hover:border-solid hover:border-white" class="mt-4 mb-4" buttonTitle="Request a Demo"></app-button>
+            <app-button ngClass="hidden md:block" buttonClass="text-[#002868] bg-white cursor-pointer text-xs md:text-lg hover:bg-[#002868] hover:text-white hover:border-1 hover:border-solid hover:border-white" class="mt-4 mb-4" buttonTitle="Login"></app-button>
+        </div>
+            <img class="md:hidden w-[160px]" src="/assets/images/logo.png" alt="Caltondatx Logo">
+    </ng-template>
+</p-menubar>

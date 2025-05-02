@@ -1,15 +1,115 @@
 import { Component, signal } from '@angular/core';
 import { CustomerStories } from '../../interface';
+import { MenubarModule } from 'primeng/menubar';
+import { NgClass, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MenuItem } from 'primeng/api';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [MenubarModule, NgClass, NgIf, RouterLink, ButtonComponent, ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   headerTitle = signal('');
   customerStories!: CustomerStories[]; 
+  items: MenuItem[] = [ 
+    { 
+        label: 'Home', 
+        items: [ 
+            { label: 'Overview of CaltonDatx', route: '/test' }, 
+            { label: 'Core Features' },
+            { label: 'Why CaltonDatx' }, 
+            { label: 'Request a Demo (CTA)' } 
+        ],
+        route: '/'
+    }, 
+    { 
+        label: 'Product', 
+        items: [ 
+            { 
+              label: 'People Analytics',
+              items : [
+                { label: 'Gender Detection' },
+                { label: 'Age Group Estimates' },
+                { label: 'Foot Traffic Heatmaps' }
+              ]
+            },
+            { 
+              label: 'Vehicle Analytics',
+              items: [
+                { label: 'Vehicle Count' },
+                { label: 'Type/Direction Detection' },
+                { label: 'Watcher Stats' },
+              ]
+            },
+            { label: 'Real-Time Dashboard' },
+            { label: 'Reports & Insights' },
+            { 
+              label: 'AI & Data Privacy',
+              items: [
+                { label: 'No image/video storage' },
+                { label: 'Anonymized data' },
+              ] 
+            },
+            { 
+              label: 'Integration Capabilities',
+              items: [
+                { label: 'Digital Signage (Vcastplay)' },
+                { label: 'Portals, CMS, etc.' },
+              ] 
+            },
+        ] ,
+        route : '/route1'
+    },
+    {
+      label: 'Solutions',
+      items: [
+        { label: 'For Advertising Agencies' },
+        { label: 'For Malls & Retail' },
+        { label: 'For Local Government' },
+        { label: 'For Transport Hubs' },
+        { label: 'Custom Solution' },
+      ]
+    },
+    {
+      label: 'Resources',
+      items: [
+        { label: 'Case Studiess' },
+        { label: 'Whitepapers' },
+        { label: 'Blog / Updates' },
+        { label: 'Product Documentation' },
+        { label: 'Video Demos / Tutorials' },
+      ]
+    },
+    {
+      label: 'About Us',
+      items: [
+        { label: 'Company Profile (NYXSYS)' },
+        { label: 'Vision & Mission' },
+        { label: 'Team' },
+        { label: 'Careers' },
+      ]
+    },
+    {
+      label: 'Support',
+      items: [
+        { label: 'Contact Support' },
+        { label: 'FAQs' },
+        { label: 'Request Assistance' },
+      ]
+    },
+    {
+      label: 'Request a Demo',
+      styleClass: 'md:hidden block'
+    },
+    {
+      label: 'Login',
+      styleClass: 'md:hidden block'
+    }
+]; 
   // Header
   links = `
       CaltonDatx Website Menu Structure

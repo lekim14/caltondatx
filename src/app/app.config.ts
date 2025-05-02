@@ -6,6 +6,8 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { providePrimeNG } from 'primeng/config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
+import Material from '@primeng/themes/Material';
+import Aura from '@primeng/themes/Aura';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,14 +17,16 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     providePrimeNG({
       theme: {
-        //   preset: Material,
-        //   options: {
-        //     cssLayer: {
-        //         name: 'primeng',
-        //         order: 'tailwind-base, primeng, tailwind-utilities'
-        //     }
-        // }
+          preset: Aura,
+          options: {
+            darkModeSelector: false,
+            // cssLayer: {
+            //     name: 'primeng',
+            //     order: 'tailwind-base, primeng, tailwind-utilities',
+            // },
+          }
       },
+      
       
     }),
     provideHttpClient()

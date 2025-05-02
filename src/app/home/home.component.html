@@ -2,9 +2,9 @@
     <!-- Container -->
     <div class="pl-3 pr-3 pt-3 pb-10 md:p-12 md:pt-3 bg-[#002868] text-white">
         <!-- Logo -->
-        <div>
-            <img class="w-[160px] md:w-[270px]" src="/assets/images/logo.png" alt="Caltondatx Logo">
-        </div>
+        <!-- <div>
+            <img class="md:hidden block w-[160px] md:w-[270px]" src="/assets/images/logo.png" alt="Caltondatx Logo">
+        </div> -->
 
         <!-- Columns -->
         <div class="md:columns-2 columns-1">
@@ -208,7 +208,7 @@
                 <div class="grid justify-items-center border-2 border-solid md:w-[50%] p-2 md:p-9 md:h-[85%] lg:h-auto md:gap-7 lg:gap-0">
                     <i class="pi pi-user md:[--p-icon-size:2rem] lg:[--p-icon-size:3rem]"></i>
                     <!-- stay [circular] as false or the layout will change -->
-                    <p-carousel class="inline-block" [value]="customerStories" [circular]="false" autoplayInterval="2000">
+                    <p-carousel class="inline-block" [value]="customerStories" [circular]="false" autoplayInterval="2000" indicatorsContentClass="hidden">
                         <ng-template let-item pTemplate="item">
                             <div class="m-2 md:m-0 lg:m-2 md:pb-4 overflow-hidden">
                                 <p class="italic text-center text-[#002868] md:text-sm lg:text-xl clamp">
@@ -229,5 +229,5 @@
         <app-contact-us></app-contact-us>
         <!-- Footer -->
         <app-footer></app-footer>
-        <p-scrolltop styleClass="[p-scrolltop:bg-red-400 p-scrolltop:text-red]" icon="pi pi-arrow-up" />
+        <p-scrolltop icon="pi pi-arrow-up" [buttonProps]="{ severity: 'contrast', raised: true, rounded: true }" />
 </main>

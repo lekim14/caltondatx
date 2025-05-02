@@ -3,10 +3,18 @@
 }
 
 ::ng-deep .p-accordionheader {
-    border-bottom: 1px solid white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-bottom: 1px solid white !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background-color: transparent !important;
+    color: white !important;
+    padding: 0 !important;
+}
+
+::ng-deep .p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader {
+    background-color: transparent !important;
+    color: white !important;
 }
 
 ::ng-deep .p-accordioncontent {
@@ -17,6 +25,9 @@
 ::ng-deep .p-accordioncontent-content {
     box-shadow: none !important;
     border: none;
+    color: white !important;
+    background-color: transparent !important;
+    
 }
 
 ::ng-deep .p-accordion{
@@ -26,6 +37,10 @@
     .p-iconwrapper{
         display: none;
     }
+}
+
+::ng-deep .p-carousel-indicator-list{
+    display: none;
 }
 
 .pi::before {
@@ -41,4 +56,13 @@
 
 .text-responsive {
     // font-size: clamp(1.875rem, 6rem, 2.25rem);
+}
+
+:host ::ng-deep .p-scrolltop { 
+    border: none;
+    background-color: #002868; 
+  
+    &:hover { 
+        background-color: darkblue; 
+    } 
 }
