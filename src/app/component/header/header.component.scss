@@ -8,6 +8,7 @@
     // color: white !important;
 }
 
+// Mobile view
 @media only screen and (max-width: 768px) {
     :host ::ng-deep .p-menubar{
         padding-left: 1rem;
@@ -18,11 +19,12 @@
 
 ::ng-deep .p-menubar-item-link{
     color: #002868 !important;
+
+    &:hover{
+        background-color: transparent !important;
+    }
 }
-::ng-deep .p-menubar-item-link:hover{
-    // color: white !important;
-    background-color: transparent !important;
-}
+
 
 ::ng-deep .p-menubar-item-content{
     color: #002868 !important;
@@ -44,8 +46,4 @@
 :host ::ng-deep .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link{
     color: #002868 !important;
     background-color: transparent !important;
-
-    .p-menubar{
-        // padding: 20rem !important;
-    }
 }

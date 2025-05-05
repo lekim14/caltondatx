@@ -1,38 +1,15 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { ButtonComponent } from '../component/button/button.component';
-import { FaqComponent } from '../component/faq/faq.component';
-import { ContactUsComponent } from '../component/contact-us/contact-us.component';
-import { AccordionModule } from 'primeng/accordion';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-import { CustomerStories } from '../interface';
+import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { FooterComponent } from '../component/footer/footer.component';
-import { ReviewsService } from '../services/reviews.service';
-import { ScrollTopModule } from 'primeng/scrolltop';
-import { ComponentsModule } from '../modules/components/components.module';
+import { CustomerStories } from '../../interface';
 
 @Component({
-  selector: 'app-home',
-  imports: [
-    ButtonComponent, 
-    FaqComponent, 
-    CarouselModule, 
-    ContactUsComponent, 
-    AccordionModule, 
-    AnimateOnScrollModule, 
-    FooterComponent, 
-    ScrollTopModule,
-    ComponentsModule
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  selector: 'app-customer-stories',
+  imports: [CarouselModule],
+  templateUrl: './customer-stories.component.html',
+  styleUrl: './customer-stories.component.scss'
 })
-export class HomeComponent implements OnInit{
-  headerTitle = signal('');
+export class CustomerStoriesComponent implements OnInit{
   customerStories!: CustomerStories[]; 
-  activatedRoute: any;
-
-  constructor(private reviewApi: ReviewsService){}
 
   ngOnInit(){
     this.customerStories = [
@@ -58,11 +35,5 @@ export class HomeComponent implements OnInit{
       }
     ]
     // this.getCustomerStories();
-  }
-
-  getCustomerStories(){
-    this.reviewApi.getPost().subscribe(data => {
-      this.customerStories = data
-    })
   }
 }

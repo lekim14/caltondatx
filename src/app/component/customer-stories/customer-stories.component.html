@@ -1,0 +1,40 @@
+<div class="pl-3 pr-3 pt-8 pb-15 md:p-12 md:pt-12 bg-white text-[#002868]">
+    <div class="flex flex-wrap justify-center md:flex-nowrap gap-8 md:gap-30">
+        <div class="md:w-[50%]">
+            <svg class="h-10 w-10 md:h-30 md:w-60 lg:h-50 lg:w-80" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 320">
+                <path
+                    d="M82.87 129.48S77.32 98.96 114.31 74c-12.95 0-89.7 30.52-89.7 113.74 0 33.09 27.59 59.73 61.01 58.19 29.85-1.37 54.07-25.6 55.44-55.45 1.54-33.41-25.1-61-58.19-61zm154.26 0S231.58 98.96 268.57 74c-12.95 0-89.7 30.52-89.7 113.74 0 33.09 27.58 59.73 61.01 58.19 29.85-1.37 54.07-25.6 55.44-55.45 1.54-33.41-25.1-61-58.19-61z"
+                    fill="#002868"></path>
+            </svg>
+            <div class="md:pl-5 lg:pl-15">
+                <p class="mb-2 md:text-xl lg:text-2xl md:mb-5">WHAT OUR CLIENT SAYS</p>
+                <p pAnimateOnScroll enterClass="animate-slideInLeft"
+                    class="font-bold mb-2 md:text-3xl lg:text-5xl md:mb-8">Customers Stories</p>
+                <p class="italic md:text-xl lg:text-2xl">
+                    Discover how our services have
+                    transformed lives and businesses
+                    through the heartfelt stories and
+                    glowing reviews shared by our
+                    valued customers.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid justify-items-center border-2 border-solid md:w-[50%] p-2 md:p-9 md:h-[85%] lg:h-auto md:gap-7 lg:gap-0">
+            <i class="pi pi-user md:[--p-icon-size:2rem] lg:[--p-icon-size:3rem]"></i>
+            <!-- stay [circular] as false or the layout will change -->
+            <p-carousel class="inline-block" [value]="customerStories" [circular]="false" autoplayInterval="2000">
+                <ng-template let-item pTemplate="item">
+                    <div class="m-2 md:m-0 lg:m-2 md:pb-4 overflow-hidden">
+                        <p class="italic text-center text-[#002868] md:text-sm lg:text-xl clamp">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                    <p class="font-bold md:text-xl lg:text-2xl text-[#002868] text-center">{{ item.fullName }}</p>
+                </ng-template>
+            </p-carousel>
+            <!-- <p class="font-bold md:text-2xl text-[#002868]">Full Name</p> -->
+        </div>
+    </div>
+</div>

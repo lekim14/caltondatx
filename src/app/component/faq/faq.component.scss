@@ -1,0 +1,37 @@
+
+::ng-deep .p-accordionheader {
+    border-bottom: 1px solid white !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background-color: transparent !important;
+    color: white !important;
+    padding: 0 !important;
+}
+
+::ng-deep .p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+::ng-deep .p-accordioncontent {
+    box-shadow: none !important;
+    // padding: 15px;
+}
+
+::ng-deep .p-accordioncontent-content {
+    box-shadow: none !important;
+    border: none;
+    color: white !important;
+    background-color: transparent !important;
+    
+}
+
+::ng-deep .p-accordion{
+    display: grid !important;
+    gap: 20px !important;
+
+    .p-iconwrapper{
+        display: none;
+    }
+}

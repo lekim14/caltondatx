@@ -19,12 +19,12 @@ export class HeaderComponent {
     { 
         label: 'Home', 
         items: [ 
-            { label: 'Overview of CaltonDatx', route: '/test' }, 
-            { label: 'Core Features' },
-            { label: 'Why CaltonDatx' }, 
-            { label: 'Request a Demo (CTA)' } 
+            { label: 'Overview of CaltonDatx', route: '/overview-of-caltondatx' }, 
+            { label: 'Core Features', route: '/core-features' },
+            { label: 'Why CaltonDatx', route: '/why-caltondatx' }, 
+            { label: 'Request a Demo (CTA)', route: 'request-a-demo' } 
         ],
-        route: '/'
+        // route: '/'
     }, 
     { 
         label: 'Product', 
@@ -32,84 +32,88 @@ export class HeaderComponent {
             { 
               label: 'People Analytics',
               items : [
-                { label: 'Gender Detection' },
-                { label: 'Age Group Estimates' },
-                { label: 'Foot Traffic Heatmaps' }
+                { label: 'Gender Detection', route: '/product/gender-detection' },
+                { label: 'Age Group Estimates', route: '/product/age-group-estimates' },
+                { label: 'Foot Traffic Heatmaps', route: '/product/foot-traffic-heatmaps' }
               ]
             },
             { 
               label: 'Vehicle Analytics',
               items: [
-                { label: 'Vehicle Count' },
-                { label: 'Type/Direction Detection' },
-                { label: 'Watcher Stats' },
+                { label: 'Vehicle Count', route: '/product/vehicle-analytics/vehicle-count' },
+                { label: 'Type/Direction Detection', route: '/product/vehicle-analytics/type-direction-detection' },
+                { label: 'Watcher Stats', route: '/product/vehicle-analytics/watcher-stats' },
               ]
             },
-            { label: 'Real-Time Dashboard' },
-            { label: 'Reports & Insights' },
+            { label: 'Real-Time Dashboard', route: '/products/real-time-dashboard' },
+            { label: 'Reports & Insights', route: '/products/reports-insights' },
             { 
               label: 'AI & Data Privacy',
               items: [
-                { label: 'No image/video storage' },
-                { label: 'Anonymized data' },
+                { label: 'No image/video storage', route: '/products/ai-and-data-privacy/no-image-video-storage' },
+                { label: 'Anonymized data', route: '/products/ai-and-data-privacy/anonymized-data' },
               ] 
             },
             { 
               label: 'Integration Capabilities',
               items: [
-                { label: 'Digital Signage (Vcastplay)' },
-                { label: 'Portals, CMS, etc.' },
+                { label: 'Digital Signage (Vcastplay)', route: '/product/integration-capabilities/digital-signage-vscastplay' },
+                { label: 'Portals, CMS, etc.', route: '/product/integration-capabilities/portal-cms-etc' },
               ] 
             },
         ] ,
-        route : '/route1'
     },
     {
       label: 'Solutions',
       items: [
-        { label: 'For Advertising Agencies' },
-        { label: 'For Malls & Retail' },
-        { label: 'For Local Government' },
-        { label: 'For Transport Hubs' },
-        { label: 'Custom Solution' },
+        { label: 'For Advertising Agencies', route: '/solutions/for-advertising-agencies' },
+        { label: 'For Malls & Retail', route: '/solutions/for-malls-and-retail' },
+        { label: 'For Local Government', route: '/solutions/for-local-government' },
+        { label: 'For Transport Hubs', route: '/solutions/for-transport-hubs' },
+        { label: 'Custom Solution', route: '/solutions/custom-solution' },
       ]
     },
     {
       label: 'Resources',
       items: [
-        { label: 'Case Studiess' },
-        { label: 'Whitepapers' },
-        { label: 'Blog / Updates' },
-        { label: 'Product Documentation' },
-        { label: 'Video Demos / Tutorials' },
+        { label: 'Case Studiess', route: '/resources/case-studies' },
+        { label: 'Whitepapers', route: '/resources/whitepapers' },
+        { label: 'Blog / Updates', route: '/resources/blog-updates' },
+        { label: 'Product Documentation', route: '/resources/product-documentations' },
+        { label: 'Video Demos / Tutorials', route: '/resources/video-demos-tutorials' },
       ]
     },
     {
       label: 'About Us',
       items: [
-        { label: 'Company Profile (NYXSYS)' },
-        { label: 'Vision & Mission' },
-        { label: 'Team' },
-        { label: 'Careers' },
+        { label: 'Company Profile (NYXSYS)', route: '/about/company-profile' },
+        { label: 'Vision & Mission', route: '/about/vision-and-mission' },
+        { label: 'Team', route: '/about/teams' },
+        { label: 'Careers', route: '/about/careers' },
       ]
     },
     {
       label: 'Support',
       items: [
-        { label: 'Contact Support' },
-        { label: 'FAQs' },
-        { label: 'Request Assistance' },
+        { label: 'Contact Support', route: '/support/contact-support' },
+        { label: 'FAQs', route: '/support/faqs' },
+        { label: 'Request Assistance', route: '/support/request-assistance' },
       ]
     },
     {
       label: 'Request a Demo',
-      styleClass: 'md:hidden block'
+      styleClass: 'md:hidden block', 
+      route: '/request-a-demo'
     },
     {
       label: 'Login',
-      styleClass: 'md:hidden block'
+      styleClass: 'md:hidden block', 
+      route: '/login',
+      icon: 'pi pi-sign-in',
     }
-]; 
+  ];
+  expandedIcon = 'pi-angle-right'; 
+  activeMenu = '';
   // Header
   links = `
       CaltonDatx Website Menu Structure
@@ -161,6 +165,7 @@ export class HeaderComponent {
         Contact Support
         FAQs
         Request Assistance`
+
   // For reference
   // https://www.behance.net/
   // https://webflow.com/templates
@@ -180,9 +185,22 @@ export class HeaderComponent {
         fullName : 'Full Name 2'
       }
     ]
-
-
     
+  }
+
+  handleClick(menu: string){
+    if(this.activeMenu === menu){
+      this.activeMenu = '';
+    }else{
+      this.activeMenu = menu;
+    }
+    const filteredMenu = this.items.filter(item => item.label === menu);
+    
+    if(filteredMenu[0]?.items && menu === filteredMenu[0]?.label){
+      this.expandedIcon = 'pi-angle-down'
+    }else{
+      this.expandedIcon = 'pi-angle-right'
+    }
   }
 
 }

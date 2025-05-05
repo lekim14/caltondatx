@@ -1,8 +1,3 @@
-.logo{
-    width: 120px;
-}
-
-
 ::ng-deep .p-carousel-indicator-list{
     display: none !important;
 }
@@ -17,17 +12,4 @@
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-// .text-responsive {
-//     font-size: clamp(1.875rem, 6rem, 2.25rem);
-// }
-
-:host ::ng-deep .p-scrolltop { 
-    border: none;
-    background-color: #002868; 
-  
-    &:hover { 
-        background-color: darkblue; 
-    } 
 }
