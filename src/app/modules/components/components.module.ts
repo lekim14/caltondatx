@@ -10,6 +10,7 @@ import { CustomerStoriesComponent } from '../../component/customer-stories/custo
 import { FaqComponent } from '../../component/faq/faq.component';
 import { ContactUsComponent } from '../../component/contact-us/contact-us.component';
 import { FooterComponent } from '../../component/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   CommonModule,
@@ -22,7 +23,9 @@ const COMPONENTS = [
   CustomerStoriesComponent,
   FaqComponent,
   ContactUsComponent,
-  FooterComponent
+  FooterComponent,
+  FormsModule,
+  ReactiveFormsModule
 ]
 
 @NgModule({

@@ -11,11 +11,11 @@
             </div>
         </div>
 
-        <form (submit)="submit($event)" class="grid md:gap-3 gap-3 w-full md:w-[50%] place-items-center">
-            <input required id="fullName" (input)="onInput('fullName', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="text" placeholder="Full Name">
-            <input required id="email" (input)="onInput('email', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="email" placeholder="Email Address">
-            <input id="contactNumber" (input)="onInput('contactNumber', $event)" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="number" placeholder="Contact Number">
-            <textarea required id="message" (input)="onInput('message', $event)" class="placeholder:text-gray-400 w-full h-20 p-2 md:w-full md:h-30 md:p-3 border-2 border-solid border-[#002868] resize-none font-light" name="" placeholder="Message"></textarea>
+        <form [formGroup]="contactUs" (submit)="submit($event)" class="grid md:gap-3 gap-3 w-full md:w-[50%] place-items-center">
+            <input formControlName="fullName" id="fullName" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="text" placeholder="Full Name">
+            <input formControlName="email" id="email" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="email" placeholder="Email Address">
+            <input formControlName="contactNumber" id="contactNumber" class="placeholder:text-gray-400 w-full h-10 p-2 md:w-full md:h-12 md:p-3 border-2 border-solid border-[#002868] font-light" type="number" placeholder="Contact Number">
+            <textarea id="message" class="placeholder:text-gray-400 w-full h-20 p-2 md:w-full md:h-30 md:p-3 border-2 border-solid border-[#002868] resize-none font-light" name="" placeholder="Message"></textarea>
             <button type="submit" class="w-full bg-[#002868] text-white h-[30px] md:h-[50px] font-light hover:bg-white hover:text-[#002868] hover:border-1 hover:border-solid hover:border-[#002868] cursor-pointer">Submit</button>
         </form>
     </div>

@@ -1,59 +1,34 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { ContactUsService } from '../../services/customer/contact-us.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ComponentsModule } from '../../modules/components/components.module';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [AnimateOnScrollModule],
+  standalone: true,
+  imports: [AnimateOnScrollModule, ComponentsModule],
   templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.scss'
+  styleUrl: './contact-us.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactUsComponent {
-  fullName = signal<string>("");
-  email = signal<string>("");
-  contactNumber = signal<string>("");
-  message = signal<string>("");
+
+  // Current
+  contactUs: FormGroup = new FormGroup({
+    fullName: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, Validators.required),
+    contactNumber: new FormControl(null),
+    message: new FormControl(null, Validators.required),
+  })
 
   constructor(private contactApi: ContactUsService){}
-  
-  validateEmail(input: string){
-    return input.includes('@');
-  }
-
-  onInput(type: string, event: Event){
-    const input = event.target as HTMLInputElement;
-    switch (type) {
-      case 'fullName':
-        this.fullName.set(input.value)
-        break;
-      case 'email':
-        this.email.set(input.value)
-        break;
-      case 'contactNumber':
-        this.contactNumber.set(input.value)
-        break;
-      case 'message':
-        this.message.set(input.value)
-        break;
-      default:
-        break;
-    }
-  }
-
-  validateInput(el: HTMLElement){
-
-  }
 
   submit(event : Event){
+    console.log(this.contactUs)
     event.preventDefault();
-    const payload = {
-      fullName : this.fullName(),
-      email : this.email(),
-      contactNumber : this.contactNumber(),
-      message : this.message(),
-    }
     
-    this.contactApi.makePost(payload).subscribe({
+    this.contactApi.makePost(this.contactUs).subscribe({
       next: (response) => console.log('Success:', response),
       error: (error) => console.error('Error:', error),
     })
