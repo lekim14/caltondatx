@@ -8,6 +8,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-faq',
+  standalone: true,
   imports: [AccordionModule, AnimateOnScrollModule, NgFor, NgxSkeletonLoaderModule],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss'

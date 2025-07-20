@@ -9,10 +9,16 @@ export const routes: Routes = [
             title: 'Calton Datx',
             description:'Description Meta Tag Content',
             ogUrl: 'your og url'
+        }
+    },
+    {
+        path: 'about-us',
+        loadComponent: () => import('./about-us/about-us.component').then(m => m.AboutUsComponent),
+        data: {
+            title: 'Calton Datx | About Us',
+            description:'Description Meta Tag Content',
+            ogUrl: 'your og url'
         },
-        children: [
-
-        ]
     },
     {
         path: 'test',

@@ -10,6 +10,13 @@ import { FooterComponent } from '../component/footer/footer.component';
 import { ReviewsService } from '../services/reviews.service';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ComponentsModule } from '../modules/components/components.module';
+import { SolutionsComponent } from '../component/solutions/solutions.component';
+import { FeaturedProductComponent } from '../component/featured-product/featured-product.component';
+import { AudienceMeasurementComponent } from '../component/audience-measurement/audience-measurement.component';
+import { ElevateYourAnalyticsComponent } from '../component/elevate-your-analytics/elevate-your-analytics.component';
+import { AudienceMetricSolutionComponent } from '../component/audience-metric-solution/audience-metric-solution.component';
+import { TestimonialsComponent } from '../component/testimonials/testimonials.component';
+import { CustomerStoriesComponent } from '../component/customer-stories/customer-stories.component';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +29,13 @@ import { ComponentsModule } from '../modules/components/components.module';
     AnimateOnScrollModule, 
     FooterComponent, 
     ScrollTopModule,
-    ComponentsModule
+    SolutionsComponent,
+    FeaturedProductComponent,
+    AudienceMeasurementComponent,
+    ElevateYourAnalyticsComponent,
+    AudienceMetricSolutionComponent,
+    TestimonialsComponent,
+    CustomerStoriesComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

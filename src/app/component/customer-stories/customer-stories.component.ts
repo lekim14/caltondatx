@@ -4,6 +4,7 @@ import { CustomerStories } from '../../interface';
 
 @Component({
   selector: 'app-customer-stories',
+  standalone: true,
   imports: [CarouselModule],
   templateUrl: './customer-stories.component.html',
   styleUrl: './customer-stories.component.scss'

@@ -1,0 +1,25 @@
+<main>
+    <!-- Banner -->
+     <div class="relative h-[85vh] overflow-hidden">
+        <!-- Video Background -->
+        <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" preload="none"
+            class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover z-0 pointer-events-none"
+        >
+            <source src="assets/images/company/about-us-bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+      
+        <!-- Overlay Content -->
+        <div class="relative z-10 flex items-center justify-center h-full text-center text-white px-5 banner-text-container">
+          <div class="banner-text">
+            <h1 class="text-5xl md:text-8xl font-bold">About Calton Datx</h1>
+            <p class="mt-4 text-sm md:text-1xl">Calton Datx is committed to redefining audience measurement through intelligent, cloudbased analytics. Our goal is to provide media owners, marketers, and advertisers with upto-date, data-driven insights that optimize campaign success, increase viewerengagement, and boost return on investment.</p>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Contact Us -->
+    <app-contact-us/>
+    <!-- Footer -->
+    <app-footer/>
+</main>

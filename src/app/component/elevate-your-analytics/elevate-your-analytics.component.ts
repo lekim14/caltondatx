@@ -3,6 +3,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-elevate-your-analytics',
+  standalone: true,
   imports: [AnimateOnScrollModule],
   templateUrl: './elevate-your-analytics.component.html',
   styleUrl: './elevate-your-analytics.component.scss'

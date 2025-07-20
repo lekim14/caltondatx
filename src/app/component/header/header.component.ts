@@ -8,6 +8,7 @@ import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [MenubarModule, NgClass, NgIf, RouterLink, ButtonComponent, ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -85,6 +86,7 @@ export class HeaderComponent {
     },
     {
       label: 'About Us',
+      route: '/about-us',
       items: [
         { label: 'Company Profile (NYXSYS)', route: '/about/company-profile' },
         { label: 'Vision & Mission', route: '/about/vision-and-mission' },

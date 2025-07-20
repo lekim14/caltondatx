@@ -4,6 +4,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-footer',
+  standalone: true,
   imports: [ButtonComponent, AnimateOnScrollModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

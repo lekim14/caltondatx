@@ -4,6 +4,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-featured-product',
+  standalone: true,
   imports: [ButtonComponent, AnimateOnScrollModule],
   templateUrl: './featured-product.component.html',
   styleUrl: './featured-product.component.scss'

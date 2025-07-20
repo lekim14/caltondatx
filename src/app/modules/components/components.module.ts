@@ -11,26 +11,22 @@ import { FaqComponent } from '../../component/faq/faq.component';
 import { ContactUsComponent } from '../../component/contact-us/contact-us.component';
 import { FooterComponent } from '../../component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from '../../component/button/button.component';
+import { CarouselModule } from 'primeng/carousel';
+import { AccordionModule } from 'primeng/accordion';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { ScrollTopModule } from 'primeng/scrolltop';
 
 const COMPONENTS = [
   CommonModule,
-  SolutionsComponent,
-  FeaturedProductComponent,
-  AudienceMeasurementComponent,
-  ElevateYourAnalyticsComponent,
-  AudienceMetricSolutionComponent,
-  TestimonialsComponent,
-  CustomerStoriesComponent,
-  FaqComponent,
-  ContactUsComponent,
-  FooterComponent,
   FormsModule,
   ReactiveFormsModule
-]
+];
 
 @NgModule({
   declarations: [],
   imports: [ ...COMPONENTS ],
-  exports: [ ...COMPONENTS ]
+  exports: [ ...COMPONENTS ],
+  providers: []
 })
 export class ComponentsModule { }

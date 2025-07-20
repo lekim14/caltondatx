@@ -4,6 +4,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-audience-measurement',
+  standalone: true,
   imports: [ButtonComponent, AnimateOnScrollModule],
   templateUrl: './audience-measurement.component.html',
   styleUrl: './audience-measurement.component.scss'

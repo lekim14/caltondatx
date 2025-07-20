@@ -1,0 +1,16 @@
+.banner-text{
+    padding-left: 19rem;
+    padding-right: 19rem;
+}
+
+.banner-text-container{
+    padding-bottom: 5rem !important;
+}
+
+// Mobile view
+@media only screen and (max-width: 768px) {
+    .banner-text{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

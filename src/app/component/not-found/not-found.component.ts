@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { SeoService } from '../../services/seo.service';
+import { ComponentsModule } from '../../modules/components/components.module';
 
 @Component({
   selector: 'app-not-found',
-  imports: [RouterLink, FooterComponent],
+  standalone: true,
+  imports: [RouterLink, ComponentsModule],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss'
 })
