@@ -1,0 +1,27 @@
+<div class="lg:p-20 p-10">
+    <div class="text-center md:mb-5 mb-2">
+        <p class="poppins text-[#002868] lg:text-4xl md:text-3xl text-xl font-bold leading-[1.1]">Why Calton Datx?</p>
+    </div>
+    <div class="text-center lg:pr-50 lg:pl-50 md:text-xl md:mb-10 mb-5">
+        <p class="montserrat">
+            If you're looking to elevate your advertising strategy with data you can trust and insights that drive
+            results, Calton Datx is the solution. Here's why it's the smart choice for brands and agencies alike:
+        </p>
+    </div>
+    
+    <div class="flex flex-wrap justify-center md:gap-15 gap-10">
+        @for (item of content; track $index) {
+            <div class="border-1 grid place-content-center place-items-center md:w-[25rem] md:h-[14rem] md:p-10 p-5 rounded-4xl">
+                <div class="mb-2">
+                    <img [src]="'assets/images/icons/'+item.icon" width="40" alt="">
+                </div>
+                <div class="md:pr-15 md:pl-15 text-center">
+                    <p class="font-bold poppins text-xl">{{ item.title }}</p>
+                </div>
+                <div class="text-center">
+                    <p class="montserrat text-sm">{{ item.description }}</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -7,7 +7,7 @@ import { ComponentsModule } from '../../modules/components/components.module';
 @Component({
   selector: 'app-not-found',
   standalone: true,
-  imports: [RouterLink, ComponentsModule],
+  imports: [RouterLink, ComponentsModule, FooterComponent],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss'
 })

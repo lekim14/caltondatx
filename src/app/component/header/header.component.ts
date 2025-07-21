@@ -86,9 +86,8 @@ export class HeaderComponent {
     },
     {
       label: 'About Us',
-      route: '/about-us',
       items: [
-        { label: 'Company Profile (NYXSYS)', route: '/about/company-profile' },
+        { label: 'Company Profile (NYXSYS)', route: '/about-us/company-profile' },
         { label: 'Vision & Mission', route: '/about/vision-and-mission' },
         { label: 'Team', route: '/about/teams' },
         { label: 'Careers', route: '/about/careers' },
@@ -203,6 +202,10 @@ export class HeaderComponent {
     }else{
       this.expandedIcon = 'pi-angle-right'
     }
+  }
+
+  onHover(item: string){
+    console.log(item)
   }
 
 }

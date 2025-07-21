@@ -23,30 +23,22 @@ export class FaqComponent implements OnInit{
     this.faqs = [
       {
         id : '1',
-        question : `Question 1`,
-        answer : `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.`
+        question : `Waht types of data can Calton Datx capture?`,
+        answer : `Calton Datx captures both people and vehicle metrics, including viewer engagement (OTS,
+                  Watchers, Dwell Time), demographics (age, gender, emotion), vehicle traffic, impressions, and
+                  campaign performance.`
       },
       {
         id : '2',
-        question : `Question 2`,
-        answer : `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.`
+        question : `How accurate is the audience data?`,
+        answer : `Calton Datx uses AI-powered analytics with up to 90% accuracy under optimal conditions—
+                  clear visibility, no obstructions (like hats or glasses), and a 2–3 meter range.`
       },
       {
         id : '3',
-        question : `Question 3`,
-        answer : `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.`
+        question : `Is Calton Datx compatible with any display setup?`,
+        answer : `Yes. It supports outdoor LED screens, indoor displays, and integrates with CaltonDatx camera
+                  recorders and vcastplay media players, whether in landscape or portrait orientation.`
       }
     ]
     // this.faqApi.getPost().subscribe(data => {

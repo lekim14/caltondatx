@@ -7,6 +7,23 @@
     padding-bottom: 5rem !important;
 }
 
+.montserrat{
+    font-family: 'Montserrat';
+}
+
+.poppins{
+    font-family: 'Poppins';
+}
+
+.gradient{
+    background: #CF1EA3;
+    background: linear-gradient(to bottom, #CF1EA3 9%, #5852CF 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
 // Mobile view
 @media only screen and (max-width: 768px) {
     .banner-text{

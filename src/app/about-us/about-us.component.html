@@ -1,25 +1,124 @@
-<main>
     <!-- Banner -->
-     <div class="relative h-[85vh] overflow-hidden">
-        <!-- Video Background -->
-        <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" preload="none"
-            class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover z-0 pointer-events-none"
-        >
-            <source src="assets/images/company/about-us-bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-      
-        <!-- Overlay Content -->
-        <div class="relative z-10 flex items-center justify-center h-full text-center text-white px-5 banner-text-container">
-          <div class="banner-text">
-            <h1 class="text-5xl md:text-8xl font-bold">About Calton Datx</h1>
-            <p class="mt-4 text-sm md:text-1xl">Calton Datx is committed to redefining audience measurement through intelligent, cloudbased analytics. Our goal is to provide media owners, marketers, and advertisers with upto-date, data-driven insights that optimize campaign success, increase viewerengagement, and boost return on investment.</p>
-          </div>
+    <div class="relative h-[85vh] overflow-hidden">
+      <!-- Video Background -->
+      <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" preload="none"
+          class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover z-0 pointer-events-none"
+      >
+          <source src="assets/images/company/about-us-bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+    
+      <!-- Overlay Content -->
+      <div class="relative flex items-center justify-center h-full text-center text-white px-5 banner-text-container">
+        <div class="banner-text">
+          <h1 class="text-5xl md:text-8xl font-bold poppins">About Calton Datx</h1>
+          <p class="mt-4 text-md md:text-1xl montserrat">
+            Calton Datx is committed to redefining audience measurement through intelligent, cloudbased analytics. 
+            Our goal is to provide media owners, marketers, and advertisers with upto-date, 
+            data-driven insights that optimize campaign success, increase viewerengagement, and boost return on investment.</p>
         </div>
       </div>
+    </div>
+
+    <div class="flex flex-wrap gap-10 lg:gap-5 md:gap-5 md:flex-nowrap justify-between md:p-20 p-10">
+      <div class="md:w-[50%] w-auto">
+        <img src="assets/images/company/logo.png" class="w-[80vh]" alt="">
+      </div>
+
+      <div class="md:w-[50%] w-auto">
+        <p class="pb-9">
+          <b class="md:text-4xl lg:text-5xl text-2xl font-bold text-[#002868] leading-[1]">Built on what matters</b>
+        </p>
+        <p class="text-[#002868] md:text-xl text-md pb-8 montserrat">
+          Our modern tools and AI-powered metrics system help us close the gap between digital precision and traditional advertising. 
+          Calton Datx offers a complete analytics suite intended for the future of media performance, 
+          whether you're monitoring car impressions or pedestrian foot traffic. 
+        </p>
+        <p class="text-[#002868] md:text-xl text-md montserrat">
+          With real-time data, customizable dashboards, and location intelligence, we turn raw movement into actionable strategy. 
+          Brands can now measure impact, optimize placements, and justify ROI with confidence, all while staying ahead of shifting consumer behaviors. 
+          At Calton Datx, we don’t just track audience movement <br>—we translate it into media that moves results.
+        </p>
+      </div>
+    </div>
+
+    <div style="background-image: url(assets/images/vm-bg.png);" class="bg-cover w-[100%] h-[100%] md:p-30 p-10 grid gap-20">
+      <div class="flex flex-wrap md:flex-nowrap justify-between md:gap-10 gap-5">
+        <div class="text-white md:w-[50%] w-auto">
+          <p class="poppins md:text-4xl lg:text-5xl text-2xl font-bold md:mb-10">Vision</p>
+          <p class="montserrat md:text-xl text-md">
+            To be the most reliable and innovative supplier of
+            audience intelligence, giving media owners, agencies,
+            and brands precise, up-to-date information that
+            promotes more informed choices and maximizes
+            engagement.
+          </p>
+        </div>
+        <div class="md:w-[50%] w-auto">
+          <img src="assets/images/company/vision.png" class="w-[70vh] place-self-end" alt="">
+        </div>
+      </div>
+
+      <div class="flex flex-wrap md:flex-nowrap justify-between md:gap-20 gap-5">
+        <div class="text-white md:w-[50%] w-auto">
+          <p class="poppins md:text-4xl lg:text-5xl text-2xl font-bold md:mb-10">Mission</p>
+          <p class="montserrat md:text-xl text-md">
+            Our goal is to use leading-edge technology and
+            analytics to provide accurate, transparent, and useful
+            audience measuring solutions. By gathering authentic
+            human experiences across platforms, offering profound
+            insights into audience behavior and trends, and
+            facilitating data-driven strategies that generate
+            relevance, growth, and quantifiable effect, we hope to
+            raise the bar for media responsibility.
+          </p>
+        </div>
+        <div class="md:w-[50%] w-auto">
+          <img src="assets/images/company/mission.png" class="w-[70vh] place-self-end" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between md:pl-30 md:pr-30 md:pt-10 md:pb-10 p-10">
+      <div class="md:w-[40%]">
+        <p class="gradient poppins md:text-4xl lg:text-5xl text-2xl font-bold">Let's Build Smarter Campaigns, Together</p>
+      </div>
+      <app-button buttonClass="text-white bg-[#002868] cursor-pointer hover:bg-white hover:text-[#002868] hover:border-1 hover:border-solid hover:border-[#002868]"
+        class="mt-4 mb-4" buttonTitle="Button"></app-button>
+    </div>
+
+    <div class="bg-[#002868] text-white md:pl-30 md:pr-30 md:pt-20 md:pb-20 p-10">
+      <div class="md:w-[50%] w-full">
+        <p class="poppins md:text-4xl lg:text-5xl text-2xl font-bold md:mb-10 mb-5">How it works</p>
+        <p class="montserrat md:text-xl text-md">
+          Our goal is to use leading-edge technology and analytics to
+          provide accurate, transparent, and useful audience measuring
+          solutions. By gathering authentic human experiences across
+          platforms, offering profound insights into audience behavior and
+          trends, and facilitating data-driven strategies that generate
+          relevance, growth, and quantifiable effect, we hope to raise the
+          bar for media responsibility.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-[#002868] md:pl-30 md:pr-30 md:pt-15 md:pb-15 p-10 border-b-1">
+      <div class="md:w-[60%] w-full">
+        <p class="poppins md:text-4xl lg:text-5xl text-2xl font-bold md:mb-5 mb-2">Let Data Drive Your Decisions.</p>
+        <p class="montserrat md:text-xl text-md font-light md:mb-5 mb-2">
+          Calton Datx is where next-gen audience measurement meets intelligent analytics.
+        </p>
+        <p class="montserrat md:text-xl text-md font-light md:mb-5 mb-2">
+          Available for outdoor and indoor environments <br>
+          Accessible via browser or mobile
+        </p>
+        <p class="montserrat md:text-xl text-md font-light">
+          Contact us today to schedule a demo.
+        </p>
+      </div>
+    </div>
       
     <!-- Contact Us -->
     <app-contact-us/>
     <!-- Footer -->
     <app-footer/>
-</main>

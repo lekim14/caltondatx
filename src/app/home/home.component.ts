@@ -17,6 +17,8 @@ import { ElevateYourAnalyticsComponent } from '../component/elevate-your-analyti
 import { AudienceMetricSolutionComponent } from '../component/audience-metric-solution/audience-metric-solution.component';
 import { TestimonialsComponent } from '../component/testimonials/testimonials.component';
 import { CustomerStoriesComponent } from '../component/customer-stories/customer-stories.component';
+import { WhyCaltonComponent } from '../component/why-calton/why-calton.component';
+import { CoreFeaturesComponent } from '../component/core-features/core-features.component';
 
 @Component({
   selector: 'app-home',
@@ -31,11 +33,13 @@ import { CustomerStoriesComponent } from '../component/customer-stories/customer
     ScrollTopModule,
     SolutionsComponent,
     FeaturedProductComponent,
-    AudienceMeasurementComponent,
+    // AudienceMeasurementComponent,
     ElevateYourAnalyticsComponent,
     AudienceMetricSolutionComponent,
     TestimonialsComponent,
     CustomerStoriesComponent,
+    WhyCaltonComponent,
+    CoreFeaturesComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
