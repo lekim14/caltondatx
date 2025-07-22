@@ -1,0 +1,174 @@
+<div class="relative w-full md:h-150 h-100">
+  <!-- Background Image -->
+  <img src="assets/images/product-bg.png" alt="Nature" class="absolute z-20 inset-0 w-full h-full object-cover" />
+
+  <!-- Color Overlay -->
+  <div class="absolute inset-0 bg-[#002868]/100"></div>
+
+  <!-- Text Content -->
+  <div class="relative z-10 flex items-center justify-center h-full text-white text-center px-5">
+    <div class="md:mb-10 2xl:pr-90 2xl:pl-90 md:pr-20 md:pl-20">
+        <h1 class="text-5xl md:text-8xl font-bold poppins">Product</h1>
+        <p class="mt-4 text-md md:text-xl montserrat">
+            Calton Datx is more than just a data platform—it’s your intelligent command center for understanding real-world audiences. From bustling sidewalks to busy roads, our system captures every glance, every step, and every drive-by with real-time precision. Whether you're tracking people or vehicles, Calton Datx transforms raw movement into clear, actionable insights—so you can optimize campaigns, boost ROI, and make smarter decisions that move your business forward.
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="md:mb-10 pr-5 pl-5 md:pr-20 md:pl-20 2xl:pr-90 2xl:pl-90 text-center md:mt-15 mt-10">
+    <p class="text-3xl md:text-6xl font-bold poppins text-[#002868]">People & Vehicle Analytics</p>
+    <p class="mt-4 text-sm md:text-lg montserrat">
+        Get in-depth behavioral and demographic data for both people and vehicles. Calton Datx analyzes engagement, emotions, 
+        and traffic flow with high accuracy—helping you understand how your campaigns truly connect with the real world.
+    </p>
+</div>
+<div class="flex flex-wrap xl:flex-nowrap justify-center gap-10 md:mb-10 mb-5 pr-4 pl-4 lg:pr-10 lg:pl-10 xl:pr-70 xl:pl-70 2xl:pr-90 2xl:pl-90">
+    <!-- People Analytics -->
+    <div class="grid 2xl:w-[40%] w-[100%] gap-10 p-5">
+        <p class="text-2xl font-bold text-[#002868] poppins">People Analytics</p>
+        @for (item of peopleAnalytics; track $index) {
+            <div class="flex justify-start gap-10 place-items-center">
+                <div>
+                    <div class="relative w-18 h-20">
+                        <!-- Pink Circle (behind, slightly above/left) -->
+                        <div class="absolute bottom-4 right-3 w-15 h-15 bg-purple-400 rounded-full z-10"></div>
+
+                        <!-- Blue Circle (in front, aligned bottom-right) -->
+                        <div class="absolute bottom-0 right-0 w-15 h-15 bg-[#002868] rounded-full z-20"></div>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[#002868] montserrat">{{ item }}</span>
+                </div>
+            </div>
+        }
+    </div>
+    <!-- Vehicle Analytics -->
+    <div class="grid 2xl:w-[40%] w-[100%] gap-10 p-5">
+        <p class="text-2xl font-bold text-[#002868] poppins">Vehicle Analytics</p>
+        @for (item of vehicleAnalytics; track $index) {
+            <div class="flex justify-start gap-10 place-items-center">
+                <div>
+                    <div class="relative w-18 h-20">
+                        <!-- Pink Circle (behind, slightly above/left) -->
+                        <div class="absolute bottom-4 right-3 w-15 h-15 bg-purple-400 rounded-full z-10"></div>
+
+                        <!-- Blue Circle (in front, aligned bottom-right) -->
+                        <div class="absolute bottom-0 right-0 w-15 h-15 bg-[#002868] rounded-full z-20"></div>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="text-[#002868] montserrat">{{ item }}</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="bg-[#002868] text-white p-10">
+    <p class="poppins text-3xl xl:text-6xl lg:text-4xl font-bold mb-7">Real-Time Dashboard</p>
+    <div class="flex flex-wrap">
+        <div class="xl:w-[40%]">
+            <p class="montserrat text-md mb-7">
+                Stay in control with a powerful real-time dashboard that gives you instant visibility into audience engagement and campaign performance. 
+                Track Watchers, OTS, dwell time, attention, 
+                and more—across multiple sites and screen formats.
+            </p>
+            <p class="text-2xl xl:text-4xl poppins font-bold mb-5">Features</p>
+            @for (item of dashboardFeatures; track $index) {
+                <div class="flex mb-7 gap-5">
+                    <div>
+                        <img src="assets/images/icons/check.png" width="30" alt="">
+                    </div>
+                    <div>
+                        <p class="montserrat text-md">{{ item }}</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="xl:w-[60%]">
+            <div class="flex justify-end gap-5">
+                <img class="hidden 2xl:block xl:w-110 xl:h-150 lg:w-90 lg:h-130 md:w-50 md:h-90" src="assets/images/vehicle-dashboard.png" alt="Vehicle Dashboard">
+                <img class="hidden xl:block xl:w-110 xl:h-150 lg:w-90 lg:h-130 md:w-50 md:h-90" src="assets/images/people-dashboard.png" alt="People Dashboard">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-10 mt-10 mb-10">
+    <div class="flex flex-wrap flex-col-reverse xl:flex-row xl:flex-nowrap xl:gap-10">
+        <div class="xl:w-[50%]">
+            <div class="grid gap-5">
+                <img class="2xl:w-200 xl:w-150" src="assets/images/report-insights.png" alt="Vehicle Dashboard">
+                <img class="2xl:w-200 xl:w-150" src="assets/images/graph.png" alt="People Dashboard">
+            </div>
+        </div>
+        <div class="xl:w-[50%]">
+            <p class="poppins text-3xl xl:text-6xl lg:text-4xl font-bold mb-7 text-[#002868]">Reports & Insights</p>
+            <p class="montserrat text-md mb-7 text-[#002868]">
+                Turn complex audience data into intuitive, exportable reports. With automated, AI-powered reporting tools, Calton Datx delivers meaningful insights at the click of a button—tailored to your campaign and engagement goals.
+            </p>
+            <p class="text-2xl xl:text-4xl poppins font-bold mb-5 text-[#002868]">Features</p>
+            @for (item of reportFeatures; track $index) {
+                <div class="flex mb-7 gap-5">
+                    <div>
+                        <img src="assets/images/icons/check.png" width="30" alt="">
+                    </div>
+                    <div>
+                        <p class="montserrat text-md">{{ item }}</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="bg-[#002868] xl:p-20 p-10">
+    <div class="flex justify-between flex-wrap gap-2 xl:flex-nowrap">
+        <p class="text-xl xl:text-4xl poppins font-bold text-purple-400">Want to know more? Countinue reading..</p>
+        <app-button buttonClass="text-white text-sm font-bold bg-transparent cursor-pointer border-1 border-solid border-white md:text-xl hover:bg-white hover:text-[#002868]" buttonTitle="Book a demo"></app-button>
+    </div>
+</div>
+
+<div class="p-10 mt-10 mb-10">
+    <div class="flex flex-wrap xl:flex-nowrap xl:gap-10">
+        <div class="xl:w-[50%]">
+            <p class="poppins text-3xl xl:text-6xl lg:text-4xl font-bold mb-7 text-[#002868]">Integration Capabilities</p>
+            <p class="montserrat text-md mb-7 text-[#002868]">
+                Built to integrate easily with your existing digital signage and analytics workflows, Calton Datx works across multiple hardware setups and screen formats—giving you full flexibility and remote control.
+            </p>
+            <p class="text-2xl xl:text-4xl poppins font-bold mb-5 text-[#002868]">Features</p>
+            @for (item of integrationFeatures; track $index) {
+                <div class="flex mb-7 gap-5">
+                    <div>
+                        <img src="assets/images/icons/check.png" width="30" alt="">
+                    </div>
+                    <div>
+                        <p class="montserrat text-md">{{ item }}</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="xl:w-[50%]">
+            <div class="grid gap-5">
+                <img class="2xl:w-200 xl:w-150 w-120" src="assets/images/integration.png" alt="Vehicle Dashboard">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-[#002868] xl:p-19 p-10">
+    <div class="flex justify-between place-items-center flex-wrap gap-2 xl:flex-nowrap">
+        <p class="text-xl xl:text-4xl poppins font-bold text-blue-300">Downloadable in Google Play & Apple Store...</p>
+        <div class="flex gap-4">
+            <img class="xl:w-50 xl:h-15 md:w-50 md:h-15 w-30 h-10" src="assets/images/playstore.png" alt="">
+            <img class="xl:w-50 xl:h-15 md:w-50 md:h-15 w-30 h-10" src="assets/images/appstore.png" alt="">
+        </div>
+    </div>
+</div>
+<!-- Contact Us -->
+<app-contact-us/>
+<!-- Footer -->
+<app-footer/>

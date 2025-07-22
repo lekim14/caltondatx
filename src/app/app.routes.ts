@@ -21,6 +21,15 @@ export const routes: Routes = [
         },
     },
     {
+        path: 'product',
+        loadComponent: () => import('./product/product.component').then(m => m.ProductComponent),
+        data: {
+            title: 'Calton Datx | Product',
+            description:'Description Meta Tag Content',
+            ogUrl: 'your og url'
+        },
+    },
+    {
         path: 'test',
         loadComponent: () => import('./component/footer/footer.component').then(m => m.FooterComponent),
         data: {
