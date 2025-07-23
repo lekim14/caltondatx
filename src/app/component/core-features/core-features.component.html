@@ -1,4 +1,4 @@
-<div class="lg:p-20 p-10">
+<div class="lg:p-20 p-10" id="core-features">
     <div class="text-center md:mb-5 mb-2">
         <p class="poppins text-[#002868] lg:text-4xl md:text-3xl text-xl font-bold leading-[1.1]">Core Features</p>
     </div>
@@ -10,11 +10,11 @@
     
     <div class="flex flex-wrap justify-center md:gap-15 gap-10">
         @for (item of content; track $index) {
-            <div class="border-1 grid place-content-center place-items-center md:w-[25rem] md:h-[14rem] md:p-10 p-5 rounded-4xl">
+            <div class="border-1 grid place-content-center place-items-center md:w-[25rem] md:h-[15rem] md:p-10 p-5 rounded-4xl">
                 <div class="mb-2">
                     <img [src]="'assets/images/icons/'+item.icon" width="40" alt="">
                 </div>
-                <div class="md:pr-15 md:pl-15 text-center">
+                <div class="md:pr-10 md:pl-10 text-center">
                     <p class="font-bold poppins text-xl">{{ item.title }}</p>
                 </div>
                 <div class="text-center">

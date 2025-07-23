@@ -1,16 +1,33 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { FooterComponent } from '../component/footer/footer.component';
 import { ContactUsComponent } from '../component/contact-us/contact-us.component';
 import { ButtonComponent } from '../component/button/button.component';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [FooterComponent, ContactUsComponent, ButtonComponent],
+  imports: [FooterComponent, ContactUsComponent, ButtonComponent, RouterLink],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
-export class ProductComponent {
+export class ProductComponent implements AfterViewInit {
+
+  constructor(
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller
+  ){}
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if(fragment){
+        setTimeout(() => {
+          this.viewportScroller.scrollToAnchor(fragment)
+        })
+      }
+    })
+  }
 
   peopleAnalytics: any[] = [
     'OTS, Watcher, Dwell Time, Attention Time', 

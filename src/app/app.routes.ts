@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
     // { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -46,3 +47,15 @@ export const routes: Routes = [
         }
     }
 ];
+
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled' // optional but useful
+};
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule]
+})
+
+export class Approutes {}

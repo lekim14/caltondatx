@@ -8,6 +8,10 @@
     // color: white !important;
 }
 
+:host ::ng-deep .p-menubar-submenu{
+    z-index: 30;
+}
+
 // Mobile view
 @media only screen and (max-width: 768px) {
     :host ::ng-deep .p-menubar{

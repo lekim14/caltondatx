@@ -20,10 +20,10 @@ export class HeaderComponent {
     { 
         label: 'Home', 
         items: [ 
-            { label: 'Overview of CaltonDatx', route: '/overview-of-caltondatx' }, 
-            { label: 'Core Features', route: '/core-features' },
-            { label: 'Why CaltonDatx', route: '/why-caltondatx' }, 
-            { label: 'Request a Demo (CTA)', route: 'request-a-demo' } 
+            { label: 'Overview of CaltonDatx', route: '', fragment: '' }, 
+            { label: 'Core Features', route: '', fragment: 'core-features' },
+            { label: 'Why CaltonDatx', route: '', fragment: 'why-calton' }, 
+            { label: 'Request a Demo (CTA)', route: '' } 
         ],
         // route: '/'
     }, 
@@ -33,33 +33,33 @@ export class HeaderComponent {
             { 
               label: 'People Analytics',
               items : [
-                { label: 'Gender Detection', route: '/product/gender-detection' },
-                { label: 'Age Group Estimates', route: '/product/age-group-estimates' },
-                { label: 'Foot Traffic Heatmaps', route: '/product/foot-traffic-heatmaps' }
+                { label: 'Gender Detection', route: '/product', fragment: 'analytics' },
+                { label: 'Age Group Estimates', route: '/product', fragment: 'analytics' },
+                { label: 'Foot Traffic Heatmaps', route: '/product', fragment: 'analytics' }
               ]
             },
             { 
               label: 'Vehicle Analytics',
               items: [
-                { label: 'Vehicle Count', route: '/product/vehicle-analytics/vehicle-count' },
-                { label: 'Type/Direction Detection', route: '/product/vehicle-analytics/type-direction-detection' },
-                { label: 'Watcher Stats', route: '/product/vehicle-analytics/watcher-stats' },
+                { label: 'Vehicle Count', route: '/product', fragment: 'analytics' },
+                { label: 'Type/Direction Detection', route: '/product', fragment: 'analytics' },
+                { label: 'Watcher Stats', route: '/product', fragment: 'analytics' },
               ]
             },
-            { label: 'Real-Time Dashboard', route: '/products/real-time-dashboard' },
-            { label: 'Reports & Insights', route: '/products/reports-insights' },
+            { label: 'Real-Time Dashboard', route: '/product', fragment: 'real-time-dashboard' },
+            { label: 'Reports & Insights', route: '/product', fragment: 'reports-insights' },
             { 
               label: 'AI & Data Privacy',
               items: [
-                { label: 'No image/video storage', route: '/products/ai-and-data-privacy/no-image-video-storage' },
-                { label: 'Anonymized data', route: '/products/ai-and-data-privacy/anonymized-data' },
+                { label: 'No image/video storage', route: '/product', fragment: 'reports-insights' },
+                { label: 'Anonymized data', route: '/product', fragment: 'reports-insights' },
               ] 
             },
             { 
               label: 'Integration Capabilities',
               items: [
-                { label: 'Digital Signage (Vcastplay)', route: '/product/integration-capabilities/digital-signage-vscastplay' },
-                { label: 'Portals, CMS, etc.', route: '/product/integration-capabilities/portal-cms-etc' },
+                { label: 'Digital Signage (Vcastplay)', route: '/product', fragment: 'integration' },
+                { label: 'Portals, CMS, etc.', route: '/product', fragment: 'integration' },
               ] 
             },
         ] ,
@@ -87,10 +87,10 @@ export class HeaderComponent {
     {
       label: 'About Us',
       items: [
-        { label: 'Company Profile (NYXSYS)', route: '/about-us/company-profile' },
-        { label: 'Vision & Mission', route: '/about/vision-and-mission' },
-        { label: 'Team', route: '/about/teams' },
-        { label: 'Careers', route: '/about/careers' },
+        { label: 'Company Profile (NYXSYS)', route: '/about-us' },
+        { label: 'Vision & Mission', route: '/about-us', fragment: 'vision-mission' },
+        { label: 'Team', route: '/about' },
+        { label: 'Careers', route: '/about' },
       ]
     },
     {

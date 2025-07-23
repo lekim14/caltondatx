@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { AfterViewInit, Component, OnInit, signal } from '@angular/core';
 import { ButtonComponent } from '../component/button/button.component';
 import { FaqComponent } from '../component/faq/faq.component';
 import { ContactUsComponent } from '../component/contact-us/contact-us.component';
@@ -19,6 +19,8 @@ import { TestimonialsComponent } from '../component/testimonials/testimonials.co
 import { CustomerStoriesComponent } from '../component/customer-stories/customer-stories.component';
 import { WhyCaltonComponent } from '../component/why-calton/why-calton.component';
 import { CoreFeaturesComponent } from '../component/core-features/core-features.component';
+import { ActivatedRoute } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -35,7 +37,7 @@ import { CoreFeaturesComponent } from '../component/core-features/core-features.
     FeaturedProductComponent,
     // AudienceMeasurementComponent,
     ElevateYourAnalyticsComponent,
-    AudienceMetricSolutionComponent,
+    // AudienceMetricSolutionComponent,
     TestimonialsComponent,
     CustomerStoriesComponent,
     WhyCaltonComponent,
@@ -44,12 +46,16 @@ import { CoreFeaturesComponent } from '../component/core-features/core-features.
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit, AfterViewInit{
   headerTitle = signal('');
   customerStories!: CustomerStories[]; 
   activatedRoute: any;
 
-  constructor(private reviewApi: ReviewsService){}
+  constructor(
+    private reviewApi: ReviewsService,
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller
+  ){}
 
   ngOnInit(){
     this.customerStories = [
@@ -75,6 +81,16 @@ export class HomeComponent implements OnInit{
       }
     ]
     // this.getCustomerStories();
+  }
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if(fragment){
+        setTimeout(() => {
+          this.viewportScroller.scrollToAnchor(fragment)
+        })
+      }
+    })
   }
 
   getCustomerStories(){
