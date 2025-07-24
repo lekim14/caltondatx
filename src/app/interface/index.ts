@@ -1,6 +1,7 @@
 export interface CustomerStories{
     description : string,
-    fullName : string
+    fullName : string,
+    image: string
 }
 
 export interface FAQ{

@@ -15,26 +15,39 @@ export class CustomerStoriesComponent implements OnInit{
   ngOnInit(){
     this.customerStories = [
       {
-        description : `Discover how our services have
-                      transformed lives and businesses
-                      through the heartfelt stories and
-                      glowing reviews shared by our
-                      valued customers.`,
-        fullName : 'Full Name 1'
+        description : `Calton Datx enables us to measure the impact of our billboard campaigns, providing valuable insights that help us assess the effectiveness of our investment.`,
+        fullName : 'New Balance',
+        image: 'assets/images/testimonials/new balance.png'
       },
       {
-        description : `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.`,
-        fullName : 'Full Name 2'
+        description : `Calton Datx is important for us because when we recommend sites to clients, they often request additional data—especially traffic data—to  valuate if their investment is worthwhile. It helps us demonstrate the visibility of a site to the mass market by providing accurate and compelling numbers. What sets Calton Datx apart is its up-to-date data, unlike other sources that rely on MMDA figures, which are typically updated only once a year.`,
+        fullName : 'IPG Media Brands',
+        image: 'assets/images/testimonials/ipg media brands.png',
       },
       {
-        description: `Curabitur volutpat urna at pellentesque ornare. Vivamus enim lectus, auctor ut lectus et, commodo pellentesque nulla. Phasellus elementum dignissim placerat`,
-        fullName : 'Full Name 3'
-      }
+        fullName: 'Dentsu',
+        image: 'assets/images/testimonials/dentsu.jpg',
+        description: `Significance for me is the Indoor Report, it's a niche set of data that helps us to understand the demographics more. I have not met any data providers as detailed as Calton Datx.`,
+      },
+      {
+        fullName: 'Spark',
+        image: 'assets/images/testimonials/spark.png',
+        description: `Calton DATx supports our campaigns by delivering the key metrics for outof-home advertising: traffic count and impressions, which are  rucial for measuring campaign effectiveness.`,
+      },
+      {
+        fullName: 'UNILAB',
+        image: 'assets/images/testimonials/unilab.jpg',
+        description: `Calton DATx helps in our post campaign report to gauge efficiency of the sites.`,
+      },
+      {
+        fullName: 'The Huddle Room',
+        image: 'assets/images/testimonials/the huddle room.jpg',
+        description: `Calton DATx is highly beneficial to outof-home advertising, providing detailed data and specific figures for targeted areas, helping us make more informed decisions.`,
+      },
     ]
+
+    
     // this.getCustomerStories();
   }
+  
 }

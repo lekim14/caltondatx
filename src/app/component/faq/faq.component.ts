@@ -23,7 +23,7 @@ export class FaqComponent implements OnInit{
     this.faqs = [
       {
         id : '1',
-        question : `Waht types of data can Calton Datx capture?`,
+        question : `What types of data can Calton Datx capture?`,
         answer : `Calton Datx captures both people and vehicle metrics, including viewer engagement (OTS,
                   Watchers, Dwell Time), demographics (age, gender, emotion), vehicle traffic, impressions, and
                   campaign performance.`

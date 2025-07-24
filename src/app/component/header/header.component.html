@@ -22,7 +22,9 @@
     <ng-template #end>
         <div class="flex items-center gap-2 text-white">
             <app-button [routerLink]="'/request-a-demo'" ngClass="hidden md:block" buttonClass="md:text-sm text-[#002868] bg-white cursor-pointer text-xs lg:text-lg hover:bg-[#002868] hover:text-white hover:border-1 hover:border-solid hover:border-white" class="mt-4 mb-4" buttonTitle="Request a Demo"></app-button>
-            <app-button [routerLink]="'/login'" ngClass="hidden md:block" buttonClass="md:text-sm text-[#002868] bg-white cursor-pointer text-xs lg:text-lg hover:bg-[#002868] hover:text-white hover:border-1 hover:border-solid hover:border-white" class="mt-4 mb-4" buttonTitle="Login"></app-button>
+            <a href="https://analytics.caltondatx.com/login" target="_blank">
+                <app-button ngClass="hidden md:block" buttonClass="md:text-sm text-[#002868] bg-white cursor-pointer text-xs lg:text-lg hover:bg-[#002868] hover:text-white hover:border-1 hover:border-solid hover:border-white" class="mt-4 mb-4" buttonTitle="Login"></app-button>
+            </a>
         </div>
             <img [routerLink]="'/'" class="md:hidden w-[160px]" src="/assets/images/logo.png" alt="Caltondatx Logo">
     </ng-template>

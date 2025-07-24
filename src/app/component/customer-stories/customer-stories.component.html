@@ -21,13 +21,15 @@
             </div>
         </div>
 
-        <div class="grid justify-items-center border-2 border-solid md:w-[50%] p-2 md:p-9 md:h-[85%] lg:h-auto md:gap-7 lg:gap-0">
-            <i class="pi pi-user md:[--p-icon-size:2rem] lg:[--p-icon-size:3rem]"></i>
+        <div class="grid justify-items-center justify-center border-2 border-solid w-full md:w-[50%] p-2 md:p-9 md:h-[85%] lg:h-auto md:gap-7 lg:gap-0">
+            <!-- <i class="pi pi-user md:[--p-icon-size:2rem] lg:[--p-icon-size:3rem]"></i> -->
+             
             <!-- stay [circular] as false or the layout will change -->
-            <p-carousel class="inline-block" [value]="customerStories" [circular]="false" autoplayInterval="2000">
+            <p-carousel class="w-[60%] md:w-[60%] lg:w-[60%] xl:w-[90%]" [value]="customerStories" [circular]="false" autoplayInterval="2000">
                 <ng-template let-item pTemplate="item">
+                    <img [src]="item.image" width="100" class="mx-auto" [alt]="item.fullName" loading="lazy">
                     <div class="m-2 md:m-0 lg:m-2 md:pb-4 overflow-hidden">
-                        <p class="italic text-center text-[#002868] md:text-sm lg:text-xl clamp">
+                        <p class="italic text-center text-[#002868] md:text-sm lg:text-xl">
                             {{ item.description }}
                         </p>
                     </div>
