@@ -67,21 +67,21 @@ export class HeaderComponent {
     {
       label: 'Solutions',
       items: [
-        { label: 'For Advertising Agencies', route: '/solutions/for-advertising-agencies' },
-        { label: 'For Malls & Retail', route: '/solutions/for-malls-and-retail' },
-        { label: 'For Local Government', route: '/solutions/for-local-government' },
-        { label: 'For Transport Hubs', route: '/solutions/for-transport-hubs' },
-        { label: 'Custom Solution', route: '/solutions/custom-solution' },
+        { label: 'For Advertising Agencies', route: '', fragment: '' },
+        { label: 'For Malls & Retail', route: '', fragment: '' },
+        { label: 'For Local Government', route: '', fragment: '' },
+        { label: 'For Transport Hubs', route: '', fragment: '' },
+        { label: 'Custom Solution', route: '', fragment: '' },
       ]
     },
     {
       label: 'Resources',
       items: [
-        { label: 'Case Studiess', route: '/resources/case-studies' },
-        { label: 'Whitepapers', route: '/resources/whitepapers' },
-        { label: 'Blog / Updates', route: '/resources/blog-updates' },
-        { label: 'Product Documentation', route: '/resources/product-documentations' },
-        { label: 'Video Demos / Tutorials', route: '/resources/video-demos-tutorials' },
+        { label: 'Case Studiess', route: '', fragment: '' },
+        { label: 'Whitepapers', route: '', fragment: '' },
+        { label: 'Blog / Updates', route: '', fragment: '' },
+        { label: 'Product Documentation', route: '', fragment: '' },
+        { label: 'Video Demos / Tutorials', route: '', fragment: '' },
       ]
     },
     {
@@ -96,20 +96,20 @@ export class HeaderComponent {
     {
       label: 'Support',
       items: [
-        { label: 'Contact Support', route: '/support/contact-support' },
-        { label: 'FAQs', route: '/support/faqs' },
-        { label: 'Request Assistance', route: '/support/request-assistance' },
+        { label: 'Contact Support', route: '', fragment: '' },
+        { label: 'FAQs', route: '', fragment: '' },
+        { label: 'Request Assistance', route: '', fragment: '' },
       ]
     },
     {
       label: 'Request a Demo',
       styleClass: 'md:hidden block', 
-      route: '/request-a-demo'
+      route: '/'
     },
     {
       label: 'Login',
       styleClass: 'md:hidden block', 
-      route: '/login',
+      route: '/',
       icon: 'pi pi-sign-in',
     }
   ];
